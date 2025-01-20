@@ -16,3 +16,19 @@ if pair:
     print(f"Их сумма: {best_sum}")
 else:
     print("Пара не найдена")
+
+numbers.sort()
+left, right = 0, len(numbers) - 1
+best_sum = float('-inf')
+pair = None
+
+while left < right:
+    current_sum = numbers[left] + numbers[right]
+    if abs(k - current_sum) < abs(k - best_sum):
+        best_sum = current_sum
+        pair = (numbers[left], numbers[right])
+    
+    if current_sum < k:
+        left += 1
+    else:
+        right -= 1
