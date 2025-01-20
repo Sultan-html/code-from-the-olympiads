@@ -32,3 +32,9 @@ while left < right:
         left += 1
     else:
         right -= 1
+
+n, k = map(int, input().split())
+numbers = list(map(int, input().split()))
+
+numbers.sort()
+left,
